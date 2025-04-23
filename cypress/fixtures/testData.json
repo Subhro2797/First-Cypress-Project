@@ -1,0 +1,17 @@
+{
+    "OTP":{
+        "validOtp": "123456",
+        "otp1": "1",
+        "otp2": "12",
+        "otp3": "123",
+        "otp4": "1234",
+        "otp5": "12345",
+        "otp7": "1234567"
+    },
+    "code":{
+        "validCode" : "Larlow",
+        "inValidCode" : ["L", "La", "Lar", "Larl", "Larlo", "Larlows"]
+        },
+    "baseURL" : "https://staging-patient.primefocushealth.com/"
+}
+  

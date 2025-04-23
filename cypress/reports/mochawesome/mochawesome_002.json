@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-04-13T08:11:09.002Z",
+    "end": "2025-04-13T08:11:19.267Z",
+    "duration": 10265,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b9f5a62e-0873-4d42-9732-43819278cbb1",
+      "title": "",
+      "fullFile": "cypress/e2e/Login/login-negative.cy.js",
+      "file": "cypress/e2e/Login/login-negative.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "87bb8c51-4102-429c-b46f-7d8ca4156324",
+          "title": "Unsuccessful Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test invalid login codes",
+              "fullTitle": "Unsuccessful Login test invalid login codes",
+              "timedOut": null,
+              "duration": 5462,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wrap(loginData).should('have.property', 'code');\nObject.entries(loginData.code.inValidCode).forEach(([key, invalidCode]) => {\n  const login = new _LoginPage.LoginPage();\n  login.urlvisit();\n  login.typeCode(invalidCode);\n  login.clickSubmit();\n});",
+              "err": {},
+              "uuid": "966fbdfe-948c-48eb-b572-8811cc6b1ecb",
+              "parentUUID": "87bb8c51-4102-429c-b46f-7d8ca4156324",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login without filling the code",
+              "fullTitle": "Unsuccessful Login Login without filling the code",
+              "timedOut": null,
+              "duration": 512,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const login = new _LoginPage.LoginPage();\nlogin.urlvisit();\nlogin.clickSubmit();",
+              "err": {},
+              "uuid": "b6e8e692-ae07-4d16-8e5d-ceebafc86d3f",
+              "parentUUID": "87bb8c51-4102-429c-b46f-7d8ca4156324",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "966fbdfe-948c-48eb-b572-8811cc6b1ecb",
+            "b6e8e692-ae07-4d16-8e5d-ceebafc86d3f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5974,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
