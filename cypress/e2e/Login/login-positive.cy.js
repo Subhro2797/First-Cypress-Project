@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-//import { LoginPage } from "../../pages/LoginPage";
 import {LoginPage} from "../../support/pages/LoginPage"
 const { it } = require("mocha");
 

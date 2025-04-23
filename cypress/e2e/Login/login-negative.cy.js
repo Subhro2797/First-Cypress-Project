@@ -1,6 +1,4 @@
 /// <reference types="cypress" />
-//import cypress from "cypress";
-//import { LoginPage } from "../../pages/LoginPage";
 import {LoginPage} from "../../support/pages/LoginPage"
 const { it } = require("mocha");
 
@@ -47,32 +45,6 @@ describe("Unsuccessful Login", () => {
 
         });
     });
-    // it('should handle network failure while logging in', () => {
-    //     // First, visit the page normally (without intercepting page load requests)
-    //     login = new LoginPage();
-    //     login.urlvisit();
-      
-    //     // It intercepts all network requests and simulate a network error for any subsequent requests
-    //     cy.intercept('**', { forceNetworkError: true }).as('networkFailure');
-        
-    //     // Fill in the form (for example, filling out a username and password)
-        
-    //     cy.get('input[type="text"]').should('be.visible').then(() => {
-    //         cy.wrap(loginData).should('have.property', 'code');    
-    //         login.typeCode(loginData.code.validCode);
-    //         login.clickSubmit();
-    //         // Wait for the network request to be intercepted
-    //         cy.wait('@networkFailure');
-      
-    //         // Assert that an error message related to no internet connection is shown
-    //         cy.contains('No internet connection').should('be.visible');  // Adjust the message as per your app's behavior
-    //     })
-      
-        
-      
-    //     // Optionally, assert that the submit button is either disabled or the form is not submitted
-    //     //cy.get('button[type="submit"]').should('be.disabled');
-    //   });
       
 
     afterEach(() => {
