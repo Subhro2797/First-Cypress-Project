@@ -1,9 +1,8 @@
 # 📌 Project Name
+Cypress Automation Testing Project
 
-A short description of what the project does.
-
-> Example:  
-> This is a test automation project using **Cypress** to test key features of a sample web application.
+# Project Description
+>This project marks my journey into the world of test automation, where I began learning Cypress, a popular JavaScript-based testing framework. As part of my exploration into automated testing, I started working on my first Cypress project, applying the concepts I learned to create robust and efficient test cases.
 
 ---
 
