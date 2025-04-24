@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-04-24T06:27:21.794Z",
+    "end": "2025-04-24T06:27:29.772Z",
+    "duration": 7978,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "16fd8237-33fa-409a-b15d-9043832b5cee",
+      "title": "",
+      "fullFile": "cypress/e2e/Login/login-positive.cy.js",
+      "file": "cypress/e2e/Login/login-positive.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d03ae7c4-3b63-4a59-84a0-63b04f2ea418",
+          "title": "Successful Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "the Prime Health Focus logo is visible",
+              "fullTitle": "Successful Login the Prime Health Focus logo is visible",
+              "timedOut": null,
+              "duration": 3542,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "login.urlvisit();\ncy.get('img[alt=\"logo\"]').should('be.visible');",
+              "err": {},
+              "uuid": "29c327ea-a8fd-4c51-96ef-0e65534401a7",
+              "parentUUID": "d03ae7c4-3b63-4a59-84a0-63b04f2ea418",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logs in with valid credentials",
+              "fullTitle": "Successful Login Logs in with valid credentials",
+              "timedOut": null,
+              "duration": 1083,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "login.urlvisit();\ncy.get('input[type=\"text\"]').should('be.visible').then(() => {\n  cy.wrap(loginData).should('have.property', 'code');\n  login.typeCode(loginData.code.validCode);\n  login.clickSubmit();\n  //cy.pause();\n  //cy.get(\"body\").debug();\n  login.captureErrorMessage(loginData.code.validCode);\n});",
+              "err": {},
+              "uuid": "102153cc-1938-4bdb-a75c-c2ed4b83e200",
+              "parentUUID": "d03ae7c4-3b63-4a59-84a0-63b04f2ea418",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "29c327ea-a8fd-4c51-96ef-0e65534401a7",
+            "102153cc-1938-4bdb-a75c-c2ed4b83e200"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4625,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

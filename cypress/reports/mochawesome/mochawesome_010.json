@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-04-24T06:26:52.319Z",
+    "end": "2025-04-24T06:27:16.846Z",
+    "duration": 24527,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "006e4cc6-f5f0-4d64-8220-ee2f7953f884",
+      "title": "",
+      "fullFile": "cypress/e2e/Login/login-negative.cy.js",
+      "file": "cypress/e2e/Login/login-negative.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7c001bed-d5d3-4f49-8c28-78cc944172bc",
+          "title": "Unsuccessful Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test invalid login codes",
+              "fullTitle": "Unsuccessful Login test invalid login codes",
+              "timedOut": null,
+              "duration": 18332,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wrap(loginData).should('have.property', 'code');\nObject.entries(loginData.code.inValidCode).forEach(([index, invalidCode]) => {\n  login = new _LoginPage.LoginPage();\n  login.urlvisit();\n  login.typeCode(invalidCode);\n  login.clickSubmit();\n  login.captureErrorMessage(invalidCode);\n  cy.wait(2000);\n});",
+              "err": {},
+              "uuid": "b6c99695-abb2-40b1-ae4a-da51e6ae0177",
+              "parentUUID": "7c001bed-d5d3-4f49-8c28-78cc944172bc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login without filling the code",
+              "fullTitle": "Unsuccessful Login Login without filling the code",
+              "timedOut": null,
+              "duration": 515,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//visiting the URL\nlogin.urlvisit();\n//cliking the submit button\nlogin.clickSubmit();",
+              "err": {},
+              "uuid": "5b1322db-7618-43b1-98a5-cbd7b7bb69c6",
+              "parentUUID": "7c001bed-d5d3-4f49-8c28-78cc944172bc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logs in with valid credentials, including leading and trailing spaces in password",
+              "fullTitle": "Unsuccessful Login Logs in with valid credentials, including leading and trailing spaces in password",
+              "timedOut": null,
+              "duration": 861,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//const login = new LoginPage();\nlogin.urlvisit();\ncy.get('input[type=\"text\"]').should('be.visible').then(() => {\n  cy.wrap(loginData).should('have.property', 'code');\n  // Test with leading and trailing spaces in the password\n  const passwordWithSpaces = \"  \" + loginData.code.validCode + \"  \"; // Adding spaces before and after the code \n  login.typeCode(passwordWithSpaces); // Enter password with leading/trailing spaces\n  login.clickSubmit();\n});",
+              "err": {},
+              "uuid": "f818af8f-4a00-413d-ae44-6c81d06d8281",
+              "parentUUID": "7c001bed-d5d3-4f49-8c28-78cc944172bc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b6c99695-abb2-40b1-ae4a-da51e6ae0177",
+            "5b1322db-7618-43b1-98a5-cbd7b7bb69c6",
+            "f818af8f-4a00-413d-ae44-6c81d06d8281"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19708,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

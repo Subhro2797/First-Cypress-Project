@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","17998","test invalid login codes","Unsuccessful Login","Thu Apr 24 12:36:08 GMT+06:00 2025","passed","Thu Apr 24 12:36:26 GMT+06:00 2025","","","",""
+"","525","Login without filling the code","Unsuccessful Login","Thu Apr 24 12:36:26 GMT+06:00 2025","passed","Thu Apr 24 12:36:26 GMT+06:00 2025","","","",""
+"","824","Logs in with valid credentials, including leading and trailing spaces in password","Unsuccessful Login","Thu Apr 24 12:36:27 GMT+06:00 2025","passed","Thu Apr 24 12:36:27 GMT+06:00 2025","","","",""
+"","1083","Logs in with valid credentials","Successful Login","Thu Apr 24 12:36:38 GMT+06:00 2025","passed","Thu Apr 24 12:36:39 GMT+06:00 2025","","","",""
+"","2393","the Prime Health Focus logo is visible","Successful Login","Thu Apr 24 12:36:35 GMT+06:00 2025","passed","Thu Apr 24 12:36:38 GMT+06:00 2025","","","",""
