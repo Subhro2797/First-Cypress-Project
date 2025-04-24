@@ -24,15 +24,59 @@ npx cypress open
 
 npx cypress run
 
-## Report Generation Information 
-1. How to install Mocha Report Generator 
+## Report Generation Information with Mocha
+1. How to install Mocha Report Generator
 --> npm install mochaawesome --save-dev
 
 2. How to show the version of Mochaawesome
 --> npm show mochawesome version
 
-## Run Cypress Test in headful mode
-npx cypress run --e2e --headed --reporter mochawesome
+3. Run Cypress Test in headful mode
+>npx cypress run --e2e --headed --reporter mochawesome
+
+## Report Generation with Allure
+1. Remove or disable the Mocha Reporter
+> In your cypress.config.js or cypress.config.mjs file, remove or comment out the reporter and reporterOptions fields that refer to Mochawesome
+2. Use Allure Plugin Properly
+> Make sure your config file include the Alluge plugin like this ->
+  // cypress.config.mjs
+import { defineConfig } from "cypress";
+import { allureWriter } from "allure-cypress";
+
+export default defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      allureWriter(on, config);
+      return config;
+    },
+  },
+});
+
+OR, 
+
+// cypress.config.js
+const { defineConfig } = require("cypress");
+const { allureWriter } = require("allure-cypress/reporter")
+
+export default defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      allureWriter(on, config);
+      return config;
+    },
+  },
+});
+
+3. Install Allure CLI 
+> npm install -g allure-commandline --save-dev
+
+4. Generate the Allure Report
+> Once the test runs and the Allure results are generated in allure-results, use the following command
+allure generate allure-results --clean -o allure-report
+allure open allure-report
+
+This will generate the HTML report and open it in your browser.
+
 
 
 ## 📚 Resources
